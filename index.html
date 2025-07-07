@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Provelet 🥚</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  #disclaimer {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin: 60px auto 30px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 360px;
+  }
+  .how-to-icon {
+    width: 30px;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<div id="start-screen">
+  <div id="egg-instruction">Choose an egg to set your target!</div>
+  <div id="egg-select"></div>
+  <div id="disclaimer">
+    Disclaimer: <br>
+    This game is created solely for non-commercial, entertainment, and educational purposes. All visuals, names, and content are either original creations or used under the assumption of fair use. No intentional infringement of any copyrights, trademarks, or intellectual property is intended.
+    If you are a rights holder and believe your intellectual property has been used improperly, please contact the developer to resolve the matter promptly. The developer assumes no liability for any damages, losses, or claims arising from the use, misuse, or interpretation of this game. Play at your own discretion.
+  </div>
+</div>
+
+<div id="main-container">
+  <div id="game-container">
+    <img id="player" src="./assets/player.png" alt="Player">
+    <div id="ground"></div>
+
+    <div id="result-screen">
+      <div id="result-message"></div>
+      <div><span id="final-score"></span></div>
+      <button onclick="restartGame()">Restart</button>
+    </div>
+  </div>
+
+  <div id="ui">
+    <div id="info-bar">
+      <span id="time" data-label="Time">60s</span>
+      <span id="score" data-label="Score">0</span>
+      <span id="caught" data-label="Caught">0</span>
+      <span id="target-display" data-label="Target">
+        <img src="./assets/selected-egg.png" alt="Target Egg" width="28" />
+      </span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<div id="how-to-play-overlay">
+  <div id="how-to-play-content">
+    <button id="close-how-to-play">&times;</button>
+    <h2>How to Play</h2>
+    <p>
+      <img src="./assets/egg_notr.png" alt="Target Egg" class="how-to-icon">
+      Catch only the eggs that match your chosen target color.<br><br>
+
+      <img src="./assets/egg_notr.png" alt="Wrong Egg" class="how-to-icon">
+      Catching a wrong egg ends the game.<br><br>
+
+      <img src="./assets/prove.png" alt="Prove" class="how-to-icon">
+      Prove slows down the fall. 
+      <img src="./assets/sp1.png" alt="SP1" class="how-to-icon">
+      SP1 speeds it up!<br><br>
+
+      <img src="./assets/player.png" alt="Player" class="how-to-icon" style="width:40px">
+      Move your player left & right with your mouse to catch the eggs.  
+    </p>
+    <p><strong>Click the <strong>"X" BUTTON </strong> to start the game! GOOD LUCK!</strong></p>
+  </div>
+</div>
+
+</body>
+</html>
